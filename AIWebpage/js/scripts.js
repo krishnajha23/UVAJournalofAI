@@ -5,3 +5,5 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+// Change color of link on Contact Us from white to gray while hovering.
