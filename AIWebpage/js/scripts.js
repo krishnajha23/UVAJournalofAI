@@ -27,6 +27,7 @@ xhr.onreadystatechange = function() {
         for (let i = 0; i < locs.length; i++) {
             imglinks.push(imgs[0].childNodes[0].nodeValue)
         }
+        console.log(links)
         //const axiosResponse = axios.request({
         //    method: "GET",
         //    url: link,
