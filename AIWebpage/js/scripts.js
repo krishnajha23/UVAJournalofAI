@@ -15,14 +15,18 @@ var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var xmldoc = new DOMParser().parseFromString(xhr.responseText,'text/xml');
+        var imgs = xmldoc.getElementsByTagName("image:loc");
         var locs = xmldoc.getElementsByTagName("loc");
         const links = [];
+        const imglinks = [];
         for (let i = 0; i < locs.length; i++) {
             var loc = locs[i].childNodes[0];
             var link = loc.nodeValue;
             links.push(link)
         }
-        console.log(links)
+        for (let i = 0; i < locs.length; i++) {
+            imglinks.push(imgs[0].childNodes[0].nodeValue)
+        }
         //const axiosResponse = axios.request({
         //    method: "GET",
         //    url: link,
