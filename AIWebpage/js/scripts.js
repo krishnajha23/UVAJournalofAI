@@ -16,11 +16,13 @@ xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var xmldoc = new DOMParser().parseFromString(xhr.responseText,'text/xml');
         var locs = xmldoc.getElementsByTagName("loc");
+        const links = [];
         for (let i = 0; i < locs.length; i++) {
             var loc = locs[i].childNodes[0];
             var link = loc.nodeValue;
-            console.log(link)
+            links.push(link)
         }
+        console.log(links)
         //const axiosResponse = axios.request({
         //    method: "GET",
         //    url: link,
