@@ -1,12 +1,11 @@
 const axios = require('axios');
 
-async function scrapeSite(keyword) {
-	const url = `https://www.google.com/search?q=${keyword}&tbm=isch`;
+async function scrapeSite() {
+	const url = `https://krishjhaxd.wordpress.com/2023/12/29/the-art-of-connection/`;
 	const { data } = await axios.get(url);
 	return data
 }
 
-const keyword = "coffee"; // change with any keyword you want
-scrapeSite(keyword).then(result => {
+scrapeSite().then(result => {
 	console.log(result)
 	}).catch(err => console.log(err));
