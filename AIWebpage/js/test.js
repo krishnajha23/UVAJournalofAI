@@ -1,11 +1,12 @@
 const axios = require('axios');
-
+var HTMLParser = require('node-html-parser');
 async function scrapeSite() {
-	const url = `https://krishjhaxd.wordpress.com/2023/12/29/the-art-of-connection/`;
+	const url = `https://en.wikipedia.org/wiki/Main_Page`;
 	const { data } = await axios.get(url);
 	return data
 }
 
 scrapeSite().then(result => {
-	console.log(result)
+    var htmldoc = HTMLParser.parse(result);
+    console.log(htmldoc)
 	}).catch(err => console.log(err));
