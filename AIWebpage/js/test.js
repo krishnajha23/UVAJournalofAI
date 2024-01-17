@@ -8,5 +8,5 @@ async function scrapeSite() {
 
 scrapeSite().then(result => {
     var htmldoc = HTMLParser.parse(result);
-    console.log(htmldoc)
+    console.log(htmldoc.getElementsByTagName("p")[0])
 	}).catch(err => console.log(err));
