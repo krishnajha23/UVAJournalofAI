@@ -1,5 +1,5 @@
 
-path = 'AIWebpage\\articles\\Journal of AI Article 1.txt'
+path = 'articles\The Problem With AI Art.txt'
 out_path = path[0:-4] + ".html"
 author = ''
 
@@ -43,6 +43,13 @@ with open(path, 'r',) as stream:
             sent = '<p class="lh-lg">' + sent + '</p>'
             out.append(sent)
             print(sent)
+
+        elif ("(ref)" in sent):
+            tag = sent.index("(ref)")
+            sent = sent[0:tag]
+            sent = sent.strip()
+            sent = '<p class="lh-lg" style="text-indent: -30px; padding-left: 30px">' + sent + '</p>'
+            out.append(sent)
         else:
             sent = sent.strip()
             sent = '<p class="lh-lg">' + sent + '</p>'

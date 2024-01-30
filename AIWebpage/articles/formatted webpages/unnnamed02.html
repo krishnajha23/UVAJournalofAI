@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="Authors" content="" />
+    <title></title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <<a class="navbar-brand" href="home.html">
+                <img src="assets/sigailogo.jpeg" alt="Unavailable" width="60">
+                </a>>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Articles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Contact Us</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="my-5">
+            <h1 class="">Why do Large Language Models Hallucinate</h1>
+            <h3>Writen by ----</h3>
+        </div>
+        <p class="lh-lg">As part of his bid for early prison release, Michael D. Cohen used Google Bard to identify
+            legal citations that were relevantto his case. Cohen gave his lawyer Daniel Schwartz bogus legal citations
+            who would later submit them. Cohen believed that Bard was a “supercharged search engine” but Cohen’s use of
+            AI goes beyond damaging his appeal for early release. As the star witness for a Manhattan criminal case
+            against former President Trump, Cohen has been attacked by Trump’s lawyers as a “serial fabulist.” Cohen’s
+            fallacious citations only add fire to the flame.
+        </p>
+        <p class="lh-lg"> What Bard did was hallucinate; the Large LanguageModel (LLM) generated text that seemed
+            syntactically sound
+            but was factually incorrect. As embarrassing as this was in federal court, it raises the question of what
+            causes LLMs, such as ChatGPT, to hallucinate and what measures can be put in place to forestall
+            hallucinations.
+        </p>
+        <p class="lh-lg">On the other hand, hallucinations in LLMs spread misinformation and raise safety concerns for
+            real-world applications. What if all lawyers used ChatGPT to conduct research for their cases? What if
+            jurors blindly believed in these lawyers and–in the same thread–believed in ChatGPT? Convictions may be
+            misguided; those who are guilty may walk free while those who are innocent may be imprisoned.</p>
+        <p class="lh-lg">Generally speaking, hallucinations in LLMs are caused by limited contextual understanding. The
+            model is obligated to respond regardless of whether ithas domain knowledge in the field. </p>
+        <p class="lh-lg">Moreover, hallucinations can be attributed to trainingdata. When a large corpus of data is
+            collected, noise, such as phrases in the output that cannotbe explained in the input, appear. Models pick up
+            on the noise and respond in unexpected ways, generating fluent but unsupported text. Duplicates in the
+            training corpus can bias the model towards generating frequent phrases. Moreover, the prioritization of
+            parametric knowledge–knowledge acquired during pre-training and implicitly stored in model parameters–over
+            the provided contextual knowledge results in hallucinations.
+        </p>
+        <p class="lh-lg">The architecture of LLMs can alsocause hallucinations. LLMs are decoder-only architectures,
+            meaning a smaller draft model is used to predict the target model’s outputs. The decoding technique may be
+            random in nature, resulting in greater diversity in results but also increased hallucinations.
+            Possible solutions to hallucinations can be expensive. To preprocess and enhance the quality of the dataset,
+            irrelevant information, duplicates,and outliers can be removed either by hand or through an automated
+            process. The model could then be retrained. However, most devices cannot handle training a large LLM on
+            their own and even fine-tuninga model may be impossible.
+        </p>
+        <p class="lh-lg">The most practical intervention may come from humans. Users can ask the modelto regenerate a
+            response if the original is gravely wrong. For example, controlled generation and effective prompt
+            engineering can also be practiced.When writing a prompt, users can provide enough details about the question
+            at hand and the role the LLM should play in answering it. Doing so limits the model’s capacity to
+            hallucinate.
+        </p>
+        <p class="lh-lg">When it comes to LLMs, hallucinations are an unavoidable challenge. When a model generates
+            text,it cannot
+            tell if its response is actual. Because hallucinations in LLMs can pose a threat to society, researchers
+            should not sit idle but devise strategies to ameliorate the frequency of hallucinations. Current mitigation
+            strategiesare either too computationally expensive or require manualeffort. </p>
+
+</body>
