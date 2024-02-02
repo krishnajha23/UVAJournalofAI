@@ -10,14 +10,20 @@ scrapeSite().then(result => {
     var htmldoc = HTMLParser.parse(result);
 	title = htmldoc.getElementsByTagName("h2")[0].innerText;
 	console.log(title);
+	/*
 	for(let i=0; i<htmldoc.getElementsByTagName("p").length; i++){
 		console.log(htmldoc.getElementsByTagName("p")[i].innerText);
 		console.log(htmldoc.getElementsByTagName("p")[i].classNames);
 	}
-    descripOfArticle = htmldoc.getElementsByTagName("p")[1].innerText;
-	
-	post3 = htmldoc.getElementsByTagName("p")[2].innerText;
-	post4 = htmldoc.getElementsByTagName("p")[3].innerText;
-	console.log(descripOfArticle);
-    console.log(post3);
+	*/
+	descripOfArticle = htmldoc.getElementsByTagName("p")[1].innerText;
+	bruhMoment = htmldoc.querySelector('.entry-content.wp-block-post-content.has-global-padding.is-layout-constrained.wp-block-post-content-is-layout-constrained');
+	for(let i=0; i<htmldoc.getElementsByTagName("p").length; i++){
+		console.log(bruhMoment.getElementsByTagName("p")[i].innerText);
+		console.log(bruhMoment.getElementsByTagName("p")[i].classNames);
+	}
+	//post3 = htmldoc.getElementsByTagName("p")[2].innerText;
+	//post4 = htmldoc.getElementsByTagName("p")[3].innerText;
+	//console.log(descripOfArticle);
+    //console.log(post3);
 	}).catch(err => console.log(err));
